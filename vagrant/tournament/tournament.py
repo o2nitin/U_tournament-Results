@@ -110,7 +110,7 @@ def swissPairings():
     swisspair = []
     db_connect, cursor = connect()
     query = ("SELECT p_id, name \
-                FROM standings ORDER BY total_wins DESC;")
+                FROM standings ORDER BY wins DESC;")
     cursor.execute(query)
     wpair_list = cursor.fetchall()
 
