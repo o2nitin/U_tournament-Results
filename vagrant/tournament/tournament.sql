@@ -38,5 +38,5 @@ CREATE VIEW allmatches as
 -- creating view for team standings
 CREATE VIEW standings AS
 SELECT allwins.p_id, allwins.name,allwins.wins,allmatches.matches FROM allwins,allmatches
-where  allm.p_id = allw.p_id
-order by win DESC;
+where  allmatches.p_id = allwins.p_id
+order by allwins.wins DESC;
